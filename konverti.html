@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>შენთვის</title>
+  <link rel="stylesheet" href="konverti.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="valentines">
+      <div class="envelope"></div>
+      <div class="front"></div>
+      <div class="card">
+        <div class="text">გილოცავ<br>ვალენტინის<br>დღეს!</div>
+        <div class="heart"></div>
+      </div>
+      <button class="valentine-btn" onclick="window.location.href='yvavilebi.html'">
+        ბოლო საჩუქარიც 🎁
+      </button> <!-- NEW BUTTON -->
+      <div class="hearts">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+      </div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="konverti.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".envelope").click(function () {
+        window.location.href = "convert.html";
+      });
+
+      $('.container').mouseover(function () {
+        $('.card').stop().animate({ top: '-90px' }, 'slow');
+      }).mouseleave(function () {
+        $('.card').stop().animate({ top: 0 }, 'slow');
+      });
+    });
+  </script>
+</body>
+
+</html>
